@@ -62,24 +62,42 @@ console.log(dice());
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
+function whoIsBigger(num1, num2) {
+    if (num1 > num2) {
+        return num1;
+    } else return num2;
+}
+
+console.log(whoIsBigger(7, 4));
 
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
 
   Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
 */
+function splitMe(stringa) {
+    let x = stringa.split(" ");
+    return x;
+}
+console.log(splitMe("ciao come va"));
 
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
+function deleteOne(stringa, booleano) {
+    if (booleano) {
+        return stringa.substring(1, stringa.length);
+    } else return stringa.substring(0, stringa.length - 1);
+}
+console.log(deleteOne("coding", false));
 
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
 
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
-
+function onlyLetters(stringa) {}
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
@@ -87,6 +105,13 @@ console.log(dice());
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
+function whatDayIsIt() {
+    let now = new Date();
+    let day = now.getDay();
+    const daysweek = ["Domenica", "Lunedì", "Martedi", "Mercoledì", "Giovedì", "Venerdì", "Sabato"];
+    return daysweek[day];
+}
+console.log(whatDayIsIt());
 
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
