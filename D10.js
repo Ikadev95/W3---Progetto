@@ -77,6 +77,10 @@ console.log(whoIsBigger(7, 4));
 */
 function splitMe(stringa) {
     let x = stringa.split(" ");
+    for (let i = 0; i < x.length; i++) {
+        console.log(x[i]);
+        x[i] = x[i].charAt(0).toUpperCase() + x[i].slice(1).toLowerCase();
+    }
     return x;
 }
 console.log(splitMe("ciao come va"));
