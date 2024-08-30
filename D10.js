@@ -493,15 +493,23 @@ addTextClass();
 
 /* ESERCIZIO 27
   Crea una funzione chiamata "halfTree" che riceve un numero come parametro e costruisce un mezzo albero di "*" (asterischi) dell'altezza fornita.
-
   Esempio:
   halfTree(3)
 
   *
   **
   ***
+    */
 
-*/
+function halfTree(num) {
+    let rigaAst = "";
+    for (let i = 1; i <= num; i++) {
+        rigaAst += "*";
+        console.log(rigaAst);
+    }
+}
+
+halfTree(3);
 
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
