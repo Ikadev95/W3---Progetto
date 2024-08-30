@@ -522,9 +522,22 @@ halfTree(3);
   *****
 
 */
+function tree(num) {
+    let rigaAst = "";
+    let spazio = "";
+    for (let y = 1; y <= num; y++) {
+        spazio = spazio + " ";
+    }
+    for (let i = 1; i <= num; i++) {
+        rigaAst = rigaAst + "*";
+        spazio = spazio.slice(1, spazio.length);
+        console.log(spazio + rigaAst);
+    }
+}
+tree(3);
 
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
-
+function isItPrime(num) {}
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
