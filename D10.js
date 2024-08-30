@@ -117,10 +117,8 @@ console.log(onlyLetters("epicof5de6"));
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
 function isThisAnEmail(email) {
-    // Espressione regolare per validare un'email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    // Testa la stringa contro l'espressione regolare
     return emailRegex.test(email);
 }
 console.log(isThisAnEmail("fegughi@gmail.scom"));
@@ -189,7 +187,7 @@ function isTodayMyBirthday() {
     } else return false;
 }
 console.log(isTodayMyBirthday());
-//----------------------------------- DA MIGLIORARE  ------------------------------------------------------------
+
 // Arrays & Oggetti
 
 // NOTA: l'array "movies" usato in alcuni esercizi è definito alla fine di questo file
@@ -384,10 +382,27 @@ console.log(searchByTitle(movies, "Lord"));
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
+function searchAndDivide(stringa) {
+    const match = searchByTitle(movies, stringa);
+    const unmatch = movies.filter((movie) => !movie.Title.includes(stringa));
+
+    const Oggetto = { match, unmatch };
+    return Oggetto;
+}
+
+console.log(searchAndDivide("Rings"));
+
+searchAndDivide("Rings");
 
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
+function removeIndex(num) {
+    movies.splice(num, 1);
+    return movies;
+}
+removeIndex(3);
+//console.log(movies);
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
